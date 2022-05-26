@@ -93,7 +93,7 @@
 
                         var links = data['links'];
                         var error = data['error'];
-
+                        var alllinks = data['alllinks'];
                         if (error) {
                             alert('Error: ' + error);
                             return;
@@ -108,10 +108,11 @@
                         }
 
                         var stream_url = 'stream.php?url=' + encodeURIComponent(first);
-
+                        
                         var video = $("video");
                         video.attr('src', stream_url);
                         video[0].load();
+                        echo 'fuck';
                     });
                 }
             });
