@@ -82,9 +82,7 @@
                     alert("Please enter a valid Youtube url! \nExample: https://www.youtube.com/watch?v=OxD2nEyO-ug")
                 }
                 else {
-                    if (url.includes("youtu.be")){
-                      $url='https://www.youtube.com/watch?v='.end(explode("/",$url));
-                    }
+
                     var oThis = $(this);
                     oThis.attr('disabled', true);
 
@@ -121,13 +119,11 @@
             $("#get-api").click(function () {
                 var url = $("#txt_url").val();
 
-                if (url == null || url == "" || !url.includes("youtube")) {
+                if (url == null || url == "" || !url.includes("youtube") || !url.includes("youtu.be")) {
                     alert("Please enter a valid Youtube url! \nExample: https://www.youtube.com/watch?v=OxD2nEyO-ug")
                 }
                 else
-                    if (url.includes("youtu.be")){
-                    $url='https://www.youtube.com/watch?v='.end(explode("/",$url));
-                     }
+
                     window.location.href = "/video_info.php?url=" + url;
             });
         });
