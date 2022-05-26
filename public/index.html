@@ -76,8 +76,10 @@
             $("#btn_fetch").click(function () {
 
                 var url = $("#txt_url").val();
-                
-                if (url == null || url == "" || !url.includes("youtube") || !url.includes("youtu.be")) {
+                if (url.includes("youtu.be")){
+                    $url='https://www.youtube.com/watch?v='.end(explode("/",$url));
+                }
+                if (url == null || url == "" || !url.includes("youtube") ) {
                     console.log
                     alert("Please enter a valid Youtube url! \nExample: https://www.youtube.com/watch?v=OxD2nEyO-ug")
                 }
@@ -118,7 +120,10 @@
             });
             $("#get-api").click(function () {
                 var url = $("#txt_url").val();
-                if (url == null || url == "" || !url.includes("youtube")|| !url.includes("youtu.be")) {
+                if (url.includes("youtu.be")){
+                    $url='https://www.youtube.com/watch?v='.end(explode("/",$url));
+                }
+                if (url == null || url == "" || !url.includes("youtube")) {
                     alert("Please enter a valid Youtube url! \nExample: https://www.youtube.com/watch?v=OxD2nEyO-ug")
                 }
                 else
