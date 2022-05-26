@@ -26,7 +26,7 @@ try {
 
     if ($best) {
         send_json([
-            'links' => [$best->url]
+            'links' => [$links]
         ]);
     } else {
         send_json(['error' => 'No links found']);
