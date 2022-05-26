@@ -26,7 +26,7 @@ try {
     $alllinks = $links->getAllFormats();
     if ($best) {
         send_json([
-            'links' => [$best]
+            'links' => [$best],
             'alllinks'=> [$alllinks]
         ]);
     } else {
