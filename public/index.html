@@ -54,9 +54,9 @@
 </head>
 
 <body>
-    <h1>YouTube Downloader 
+    <h1>YouTube Downloader By <span style="text-shadow: #3CBC8D 4px 4px 10px ;font-size: 65px;">Slyad.com</span>
     </h1>
-    
+
     <form>
         <input type="text" placeholder="Insert A Youtube Link Here: https://www.youtube.com/watch?v=YSuHrTfcikU"
             size="80" id="txt_url">
@@ -76,8 +76,7 @@
             $("#btn_fetch").click(function () {
 
                 var url = $("#txt_url").val();
-
-                if (url == null || url == "" || !url.includes("youtube") || !url.includes("youtu.be") {
+                if (url == null || url == "" || !url.includes("youtube")|| !url.includes("youtu.be")) {
                     console.log
                     alert("Please enter a valid Youtube url! \nExample: https://www.youtube.com/watch?v=OxD2nEyO-ug")
                 }
@@ -118,12 +117,10 @@
             });
             $("#get-api").click(function () {
                 var url = $("#txt_url").val();
-
-                if (url == null || url == "" || !url.includes("youtube") || !url.includes("youtu.be")) {
+                if (url == null || url == "" || !url.includes("youtube")|| !url.includes("youtu.be")) {
                     alert("Please enter a valid Youtube url! \nExample: https://www.youtube.com/watch?v=OxD2nEyO-ug")
                 }
                 else
-
                     window.location.href = "/video_info.php?url=" + url;
             });
         });
