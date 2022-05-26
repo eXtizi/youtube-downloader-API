@@ -23,7 +23,7 @@ try {
     $links = $youtube->getDownloadLinks($url);
     
     $best = $links->getFirstCombinedFormat();
-    $alllinks = $links->getFirstCombinedFormat();
+    $alllinks = $links->getAllFormats();
     if ($best) {
         send_json([
             'links' => [$best]
