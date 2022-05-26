@@ -54,13 +54,9 @@
 </head>
 
 <body>
-    <h1>YouTube Downloader By <span style="text-shadow: #3CBC8D 4px 4px 10px ;font-size: 65px;">Maadhav Sharma</span>
+    <h1>YouTube Downloader 
     </h1>
-    <p style="font-size: 23px;">
-        Source Code:
-        <a
-            href="https://github.com/Maadhav/youtube-downloader-API">https://github.com/Maadhav/youtube-downloader-API</a>
-    </p>
+    
     <form>
         <input type="text" placeholder="Insert A Youtube Link Here: https://www.youtube.com/watch?v=YSuHrTfcikU"
             size="80" id="txt_url">
@@ -80,7 +76,8 @@
             $("#btn_fetch").click(function () {
 
                 var url = $("#txt_url").val();
-                if (url == null || url == "" || !url.includes("youtube")) {
+                
+                if (url == null || url == "" || !url.includes("youtube") || !url.includes("youtu.be")) {
                     console.log
                     alert("Please enter a valid Youtube url! \nExample: https://www.youtube.com/watch?v=OxD2nEyO-ug")
                 }
@@ -129,10 +126,7 @@
             });
         });
     </script>
-    <p style="font-size: 16px;">
-        Project Originally Forked From:
-        <a href="https://github.com/Athlon1600/youtube-downloader">https://github.com/Athlon1600/youtube-downloader</a>
-    </p>
+
 
 </body>
 
